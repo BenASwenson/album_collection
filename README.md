@@ -21,9 +21,7 @@ There are four ways to setup the web server:
 
 ## The Database
 - using Sqlite, via PHP's PDO driver
-- making use of laminas-db's TableGateway to find, insert, update, and delete rows from a database table
-
-
+- Data persistence was performed using laminas-db's TableGateway to find, insert, update, and delete rows from a database table
 
 ### Using docker-compose
 
@@ -126,3 +124,13 @@ server {
 
 Restart the nginx, now you should be ready to go!
 
+### Conclusion
+The most important part of applications built with laminas-mvc are the modules, the building blocks of any laminas-mvc application.
+
+To ease the work with dependencies inside our applications, we use the service manager.
+
+To be able to map a request to controllers and their actions, we use routes.
+
+Data persistence was performed using laminas-db to communicate with a relational database. Input data is filtered and validated with input filters, and, together with laminas-form, they provide a strong bridge between the domain model and the view layer.
+
+laminas-view is responsible for the View in the MVC stack, together with a vast amount of view helpers.
